@@ -13,12 +13,17 @@ Install-Package Microsoft.EntityFrameworkCore.Design
 Install-Package Microsoft.EntityFrameworkCore.sqlserver
 ```
 
-## Pacotes instalados na camada Domain (Services\Catalogo\NerdStore.Catalogo.Domain):
+## Pacote instalado na camada Domain (Services\Catalogo\NerdStore.Catalogo.Domain):
 ```
 Install-Package mediatr
 ```
 
-## Pacotes instalados na camada Core (Services\Core\NerdStore.Core):
+## Pacote instalado na camada Core (Services\Core\NerdStore.Core):
 ```
 Install-Package mediatr
+```
+
+## Pacote instalado na camada Application (Services\Catalogo\NerdStore.Catalogo.Application):
+```
+Install-Package automapper
 ```
