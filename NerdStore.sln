@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A414B687-967A-482F-8E67-957481A07080}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{16CE3A2A-23DE-4DDA-8331-3E6C7B352C3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cadastros", "Cadastros", "{94B19C43-DF6D-4A26-909E-32C4FFE4E539}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalogo", "Catalogo", "{D0161ABF-209A-41E1-87A1-922DABD705F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{63B61FA6-98BE-4A67-8D54-4094972985FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fiscal", "Fiscal", "{F9D3009C-270A-4B76-9E3F-DA48F5D598D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagamentos", "Pagamentos", "{512A2BDB-8DC4-4FCF-A8EB-859DB4464A4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vendas", "Vendas", "{7AB7D977-0777-4DAA-A33F-C947BFD7B1E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Catalogo.Domain", "src\NerdStore.Catalogo.Domain\NerdStore.Catalogo.Domain.csproj", "{E7A9C578-DEA6-42E0-92AB-15838AE66705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NerdStore.Core", "src\NerdStore.Core\NerdStore.Core.csproj", "{B58BC90C-3028-4915-85BB-8C0D5061D37E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7A9C578-DEA6-42E0-92AB-15838AE66705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7A9C578-DEA6-42E0-92AB-15838AE66705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7A9C578-DEA6-42E0-92AB-15838AE66705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7A9C578-DEA6-42E0-92AB-15838AE66705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B58BC90C-3028-4915-85BB-8C0D5061D37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58BC90C-3028-4915-85BB-8C0D5061D37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58BC90C-3028-4915-85BB-8C0D5061D37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58BC90C-3028-4915-85BB-8C0D5061D37E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94B19C43-DF6D-4A26-909E-32C4FFE4E539} = {A414B687-967A-482F-8E67-957481A07080}
+		{D0161ABF-209A-41E1-87A1-922DABD705F9} = {A414B687-967A-482F-8E67-957481A07080}
+		{63B61FA6-98BE-4A67-8D54-4094972985FF} = {A414B687-967A-482F-8E67-957481A07080}
+		{F9D3009C-270A-4B76-9E3F-DA48F5D598D6} = {A414B687-967A-482F-8E67-957481A07080}
+		{512A2BDB-8DC4-4FCF-A8EB-859DB4464A4A} = {A414B687-967A-482F-8E67-957481A07080}
+		{7AB7D977-0777-4DAA-A33F-C947BFD7B1E5} = {A414B687-967A-482F-8E67-957481A07080}
+		{E7A9C578-DEA6-42E0-92AB-15838AE66705} = {D0161ABF-209A-41E1-87A1-922DABD705F9}
+		{B58BC90C-3028-4915-85BB-8C0D5061D37E} = {63B61FA6-98BE-4A67-8D54-4094972985FF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B272EB1-0FC6-4B02-9ABA-1DC567B2B3C6}
+	EndGlobalSection
+EndGlobal
