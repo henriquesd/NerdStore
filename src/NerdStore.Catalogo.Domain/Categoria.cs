@@ -1,4 +1,5 @@
 ﻿using NerdStore.Core.DomainObjects;
+using System.Collections.Generic;
 
 namespace NerdStore.Catalogo.Domain
 {
@@ -6,6 +7,12 @@ namespace NerdStore.Catalogo.Domain
     {
         public string Nome { get; private set; }
         public int Codigo { get; private set; }
+
+        // EF Relation - é uma relação com o EF, não é utilizado para fins de modelagem;
+        public ICollection<Produto> Produtos { get; set; }
+
+        // O EF tem problemas em popular objetos que não tenham o construtor aberto, sem parâmetros;
+        protected Categoria() { }
 
         public Categoria(string nome, int codigo)
         {
