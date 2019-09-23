@@ -19,6 +19,9 @@ namespace NerdStore.Catalogo.Domain
         public Dimensoes Dimensoes { get; private set; }
         public Categoria Categoria { get; private set; } // essa classe, essa relação, só diz respeito que a classe possui uma categoria;
 
+        // este construtor é utilizado para o EF;
+        protected Produto() { }
+
         public Produto(string nome, string descricao, bool ativo, decimal valor, Guid categoriaId, DateTime dataCadastro, string imagem, Dimensoes dimensoes)
         {
             // if (nome == "") throw new Exception("O nome nao pode estar vazio");
