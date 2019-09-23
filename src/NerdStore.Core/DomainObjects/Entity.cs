@@ -54,5 +54,10 @@ namespace NerdStore.Core.DomainObjects
             // caso precise de alguma maneira comparar, vai ter esta informação do nome da entidade com o Id;
             return $"{GetType().Name} [Id={Id}]";
         }
+
+        public virtual bool EhValido()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
