@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using NerdStore.Catalogo.Domain;
 using NerdStore.Core.Data;
+using NerdStore.Core.Messages;
 
 namespace NerdStore.Catalogo.Data
 {
@@ -25,6 +26,8 @@ namespace NerdStore.Catalogo.Data
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                 e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
                 property.Relational().ColumnType = "varchar(100)";
+
+            modelBuilder.Ignore<Event>();
 
             // ele vai buscar todas as entidades que estão declaradas acima, buscar os mappings dela via reflection (uma única vez) e configurar
             // para que ele siga as configurações feitas (na CategoriaMapping e no ProdutoMapping por exemplo);

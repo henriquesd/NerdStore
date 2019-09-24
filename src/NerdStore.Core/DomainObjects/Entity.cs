@@ -1,19 +1,36 @@
-﻿using System;
+﻿using NerdStore.Core.Messages;
+using System;
+using System.Collections.Generic;
 
 namespace NerdStore.Core.DomainObjects
 {
     public abstract class Entity
     {
         public Guid Id { get; set; }
+        private List<Event> _notificacoes;
+        public IReadOnlyCollection<Event> Notificacoes => _notificacoes?.AsReadOnly();
 
         protected Entity()
         {
             Id = Guid.NewGuid();
         }
 
-        // isso é necessário porque a gente precisa tratar as nossas entidades como uma coisa única;
+        public void AdicionarEvento(Event evento)
+        {
+            _notificacoes = _notificacoes ?? new List<Event>();
+            _notificacoes.Add(evento);
+        }
 
-        // para uma entidade ser igual a outra, ela vai ter que ser do mesmo tipo e ter o mesmo Id;
+        public void RemoverEvento(Event eventItem)
+        {
+            _notificacoes?.Remove(eventItem);
+        }
+
+        public void LimparEventos()
+        {
+            _notificacoes?.Clear();
+        }
+
         public override bool Equals(object obj)
         {
             var compareTo = obj as Entity;
@@ -40,10 +57,6 @@ namespace NerdStore.Core.DomainObjects
             return !(a == b);
         }
 
-        // pra não ter erro de gerar um HashCode; um dos fatores de comparação de classe é o HashCode, é como se fosse um código
-        // exclusivo daquela classe, onde para que não haja chance de errar o HashCode por causa de por caso ser gerado igual, ele está
-        // sendo multiplicado por um número aleatório (907) e somar com o HashCode do Id (que seria o Id Guid); então este valor vai ser único
-        // para cada entidade, para que não haja chance de ao utilizar o HashCode de comparação, por um acaso conseguir o mesmo valor sem querer;
         public override int GetHashCode()
         {
             return (GetType().GetHashCode() * 907) + Id.GetHashCode();
@@ -51,7 +64,6 @@ namespace NerdStore.Core.DomainObjects
 
         public override string ToString()
         {
-            // caso precise de alguma maneira comparar, vai ter esta informação do nome da entidade com o Id;
             return $"{GetType().Name} [Id={Id}]";
         }
 
