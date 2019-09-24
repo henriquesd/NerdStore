@@ -21,6 +21,7 @@ Install-Package mediatr
 ## Pacote instalado na camada Core (Services\Core\NerdStore.Core):
 ```
 Install-Package mediatr
+Install-Package FluentValidation
 ```
 
 ## Pacote instalado na camada Application (Services\Catalogo\NerdStore.Catalogo.Application):
